@@ -80,7 +80,7 @@ permissions:
 
 jobs:
   benchmark:
-    runs-on: ${{ inputs.runner }}
+    runs-on: [self-hosted, h200-node013-miraj]
     timeout-minutes: 180
     name: '${{ inputs.exp-name }} ${{ inputs.runner }} ${{ inputs.framework }} ${{ inputs.precision }} tp=${{ inputs.tp }} ep=${{ inputs.ep }} dpa=${{ inputs.dp-attn }} conc=${{ inputs.conc }}'
     steps:
